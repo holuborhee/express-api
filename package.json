@@ -1,15 +1,14 @@
 {
-  "name": "Express API",
+  "name": "express-api",
   "version": "1.0.0",
   "description": "Skeleton repo for building express app",
   "main": "lib/index.js",
   "author": "John David",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/holuborhee/express-api"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/holuborhee/express-api/issues"
   },
