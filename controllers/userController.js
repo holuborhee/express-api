@@ -1,4 +1,4 @@
-import User from './models/user';
+import User from '../models/user';
 
 /**
   * Authentication Controller
@@ -15,13 +15,12 @@ class UserController {
      */
   static create(req, res) {
     const { name, address, role } = req.body;
-    let user = User.add({ name, address, role });
-    if(user){
-      return res.status(201).send({error: false, user: user})
+    const user = User.add({ name, address, role });
+    if (user) {
+      return res.status(201).send({ error: false, user });
     }
-    else {
-      return res.status(400).send({error: true, message:"The request sent is a bad one", request: req});
-    }
+
+    return res.status(400).send({ error: true, message: 'The request sent is a bad one', request: req });
   }
 
   /**
@@ -31,17 +30,15 @@ class UserController {
       * @param {object} res The response body.
      * @returns {object} res.
      */
-  static show(id){
+  static show(req, res) {
     const { id } = req.body;
-    let user = User.find(id);
-    if(user){
-      return res.status(201).send({error: false, user: user})
+    const user = User.find(id);
+    if (user) {
+      return res.status(201).send({ error: false, user });
     }
-    else {
-      return res.status(404).send({error: true, message:"User not found on server", request: req});
-    }
-  }
 
+    return res.status(404).send({ error: true, message: 'User not found on server', request: req });
+  }
 }
 
 export default UserController;

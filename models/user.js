@@ -1,6 +1,6 @@
-import { users } from './lib/db';
+import db from '../lib/db';
 
-
+const { users } = db;
 class User {
   static add(props) {
     const user = props;
@@ -10,12 +10,12 @@ class User {
   }
 
   static find(id) {
-    const id = parseInt(id, 10);
-    const user = users.find(user => user.id === id);
+    const i = parseInt(id, 10);
+    const user = users.find(u => u.id === i);
     return user;
   }
 
-  static all(){
+  static all() {
   	return users;
   }
 }

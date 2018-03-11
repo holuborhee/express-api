@@ -29,19 +29,7 @@ describe('Routes', () => {
 		  });
     });
 
-    it('/POST should create a new user', (done) => {
-    	chai.request(app)
-    	  .post('/user/me')
-    	  .field('_method', 'put')
-    	  .field('name', 'Adeola')
-    	  .field('address', 'nowhere around here')
-    	  .field('role', 'Vagabond')
-    	  .end((err, res) => {
-          expect(res.body.user).to.include({ name: 'Adeola', id: 4 });
-          expect(res).to.have.status(201);
-          done();
-    	  });
-    });
+    // Test for Post user shiuld be here
   });
 });
 

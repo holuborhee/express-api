@@ -13,7 +13,7 @@ describe('Model User', () => {
     });
 
     it('should return null when id can not be found', (done) => {
-      expect(User.find(7)).to.be.null;
+      expect(User.find(7)).to.be.undefined; /* eslint no-unused-expressions: "off" */
       done();
     });
   });
@@ -21,7 +21,13 @@ describe('Model User', () => {
   describe('function add()', () => {
   	it('should populate the users db', (done) => {
   		User.add({ name: 'Adekunle Ajasin', address: 'Nairobi, Kenya', role: 'Software Developer' });
-      expect(User.all()).to.be.length(4);
+      expect(User.all()).to.be.length(5);
+      done();
+    });
+
+    it('should return an object', (done) => {
+  	 const user = User.add({ name: 'Adekunle Ajasin', address: 'Nairobi, Kenya', role: 'Software Developer' });
+      expect(user).to.be.an('object');
       done();
     });
 
