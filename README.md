@@ -1,7 +1,6 @@
 # express-api
 
 [![Build Status](https://travis-ci.org/holuborhee/express-api.svg?branch=master)](https://travis-ci.org/holuborhee/express-api)
-[![Coverage Status](https://coveralls.io/repos/github/holuborhee/express-api/badge.svg?branch=master)](https://coveralls.io/github/holuborhee/express-api?branch=master)
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/holuborhee/express-api)
 
 This repository helps to install and setup necessary tools to get started with building an API with express framework for node js.
